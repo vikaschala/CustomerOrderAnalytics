@@ -22,12 +22,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/customers/1",
+					"raw": "http://localhost:8088/customers/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"customers",
 						"1"
@@ -51,12 +51,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/customers/1/orders",
+					"raw": "http://localhost:8088/customers/1/orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"customers",
 						"1",
@@ -72,12 +72,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/customers/1/orders",
+					"raw": "http://localhost:8088/customers/1/orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"customers",
 						"1",
@@ -93,12 +93,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/customers/1/orders",
+					"raw": "http://localhost:8088/customers/1/orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"customers",
 						"1",
@@ -114,12 +114,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/customers/1/orders/1",
+					"raw": "http://localhost:8088/customers/1/orders/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"customers",
 						"1",
@@ -136,12 +136,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/admin/orders",
+					"raw": "http://localhost:8088/admin/orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"admin",
 						"orders"
@@ -160,12 +160,12 @@
 					"raw": "\"SHIPPED\""
 				},
 				"url": {
-					"raw": "http://localhost:8080/admin/orders/1/status",
+					"raw": "http://localhost:8088/admin/orders/1/status",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"admin",
 						"orders",
@@ -182,12 +182,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/analytics/top-customers",
+					"raw": "http://localhost:8088/analytics/top-customers",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"analytics",
 						"top-customers"
@@ -202,12 +202,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/analytics/retention",
+					"raw": "http://localhost:8088/analytics/retention",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"analytics",
 						"retention"
@@ -222,12 +222,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/analytics/processing-times",
+					"raw": "http://localhost:8088/analytics/processing-times",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"analytics",
 						"processing-times"
@@ -242,12 +242,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/analytics/category-aov",
+					"raw": "http://localhost:8088/analytics/category-aov",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"analytics",
 						"category-aov"
@@ -262,12 +262,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/analytics/seasonal-revenue",
+					"raw": "http://localhost:8088/analytics/seasonal-revenue",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"analytics",
 						"seasonal-revenue"
@@ -282,12 +282,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/analytics/order-sizes",
+					"raw": "http://localhost:8088/analytics/order-sizes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8088",
 					"path": [
 						"analytics",
 						"order-sizes"

@@ -1,4 +1,4 @@
-Customer Order Analytics API
+                                                                   Customer Order Analytics API
 Project Description
 The Customer Order Analytics API is a service that allows users to manage customer data and their orders. It includes various endpoints to register customers, place orders, retrieve order information, and generate analytics related to the orders. The system is backed by an H2 database that stores customer and order data.
 

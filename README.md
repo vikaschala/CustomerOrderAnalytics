@@ -1,6 +1,6 @@
-                                                                    Customer Order Analytics
+                                                          __Customer Order Analytics__
 
- Project Description
+__project Description__
  The Customer Order Analytics API is a service that allows users to manage customer data and their orders. It includes various endpoints to register customers, place orders, retrieve order information, and generate analytics related to the orders. The system is backed by an H2 database that stores customer and order data.
 
  This project enables operations such as:
@@ -18,7 +18,7 @@
  Postman (for testing API endpoints)
  Project Setup and Running the API
 
- Step 1: Clone the Repository
+ __Step 1: Clone the Repository__
  Clone the project repository to your local machine:
  bash
  Copy
@@ -30,7 +30,7 @@
  Copy
  mvn clean install
  gradle build
- Step 3: Database Setup (H2)
+__Step 3: Database Setup (H2)__
  If you are using the in-memory H2 database, there is no need for setup. The database will be created on the fly when the application runs.
  
  For persistent H2 (i.e., file-based database), make sure to edit the application.properties or application.yml file to set the JDBC connection string:
@@ -42,7 +42,7 @@
  spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 //using H2 database For Testing Purpose 
 
- Step 4: Running the API
+__Step 4: Running the API__
  With Maven:
  bash
  Copy
@@ -56,7 +56,7 @@
  Copy
  http://localhost:8088
 
- Step 5: Testing with Postman
+ __Step 5: Testing with Postman__
  Import Postman Collection: To test the API, import the Customer Order Analytics Postman collection file (customer_order_analytics.postman_collection.json).
  Open Postman.
  Go to the "Collections" tab and click "Import."
@@ -70,7 +70,7 @@
  Updating order statuses (admin only).
  Viewing various analytics like most profitable customers and monthly retention rates.
  API Endpoints Overview
- Customer Operations
+__Customer Operations__
  POST /customers: Register a new customer.
  POST /customers/:customer_id/orders: Place an order for a customer.
  GET /customers/:customer_id/orders: Retrieve orders for a customer.
@@ -86,7 +86,7 @@
  GET /analytics/seasonal-revenue: Retrieve seasonal revenue for holidays.
  GET /analytics/order-sizes: Get the most common order sizes.
  Execution Flow
- Customer Registration:
+ __Customer Registration:__
  A new customer can be registered using the POST /customers endpoint. The request should include customer details such as name and email. Upon successful registration, a new customer record will be created in the H2 database.
  Placing an Order:
  After registering a customer, an order can be placed for the customer using the POST /customers/:customer_id/orders endpoint. The body of the request will include the order details, including product names, categories, quantities, and prices. The order is then stored in the database, and a response is returned to confirm the successful creation of the order.

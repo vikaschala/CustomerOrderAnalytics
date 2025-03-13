@@ -27,34 +27,49 @@
 git clone https://github.com/your_username/customer-order-analytics.git
 cd customer-order-analytics
 ---
-**Install Dependencies**
+## 🛠️ Setup
 
-Maven: mvn clean install
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your_username/customer-order-analytics.git
+cd customer-order-analytics
+2. Install Dependencies
+Maven:
 
-Gradle: gradle build
+bash
+Copy
+mvn clean install
+Gradle:
 
-Database Setup:
+bash
+Copy
+gradle build
+3. Database Setup
+In-Memory H2: No setup needed.
 
-For in-memory H2: No setup needed.
-
-For persistent H2, update application.properties:
+Persistent H2: Update application.properties:
 
 properties
 Copy
 spring.datasource.url=jdbc:h2:file:/path/to/database;DB_CLOSE_DELAY=-1
 spring.datasource.username=sa
 spring.datasource.password=password
-Run the API:
+4. Run the API
+Maven:
 
-Maven: mvn spring-boot:run
+bash
+Copy
+mvn spring-boot:run
+Gradle:
 
-Gradle: gradle bootRun
-
-Access the API:
-
+bash
+Copy
+gradle bootRun
+5. Access the API
 Copy
 http://localhost:8088
-__Testing with Postman__
+
+� Testing with Postman
 Import the customer_order_analytics.postman_collection.json file.
 
 Test endpoints for:
@@ -67,31 +82,24 @@ Admin operations.
 
 Analytics (e.g., top customers, retention rates).
 
-API Endpoints 🌐
+🌐 API Endpoints
 Customer Operations
-POST /customers: Register a customer.
-
-POST /customers/:customer_id/orders: Place an order.
-
-GET /customers/:customer_id/orders: Retrieve orders.
-
-DELETE /customers/:customer_id/orders/:order_id: Cancel an order.
-
+Endpoint	Method	Description
+/customers	POST	Register a customer.
+/customers/:customer_id/orders	POST	Place an order.
+/customers/:customer_id/orders	GET	Retrieve orders.
+/customers/:customer_id/orders/:order_id	DELETE	Cancel an order.
 Admin Operations
-GET /admin/orders: View all orders.
-
-PUT /admin/orders/:order_id/status: Update order status.
-
+Endpoint	Method	Description
+/admin/orders	GET	View all orders.
+/admin/orders/:order_id/status	PUT	Update order status.
 Analytics
-GET /analytics/top-customers: Top 10 profitable customers.
-
-GET /analytics/retention: Monthly retention rate.
-
-GET /analytics/seasonal-revenue: Seasonal revenue trends.
-
-GET /analytics/order-sizes: Most common order sizes.
-
-Execution Flow 🔄
+Endpoint	Method	Description
+/analytics/top-customers	GET	Top 10 profitable customers.
+/analytics/retention	GET	Monthly retention rate.
+/analytics/seasonal-revenue	GET	Seasonal revenue trends.
+/analytics/order-sizes	GET	Most common order sizes.
+🔄 Execution Flow
 Register a Customer: Use POST /customers.
 
 Place an Order: Use POST /customers/:customer_id/orders.
@@ -99,11 +107,4 @@ Place an Order: Use POST /customers/:customer_id/orders.
 Admin Actions: Use GET /admin/orders and PUT /admin/orders/:order_id/status.
 
 Analytics: Use endpoints like GET /analytics/top-customers for insights.
----
-
-### **Why This Works**
-1. **Fits on One Page**: All key details are included without unnecessary fluff.
-2. **Structured**: Clear sections for easy navigation.
-3. **Visual Appeal**: Emojis, code blocks, and badges make it engaging.
-4. **Actionable**: Step-by-step instructions for setup and testing.
 

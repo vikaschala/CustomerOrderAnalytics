@@ -1,36 +1,86 @@
-<h1 style="font-size: 30px;">🚀 Customer Order Analytics API</h1>
+<h1 align="center" style="font-size: 36px;">🚀 Customer Order Analytics API</h1>
 
-<p style="font-size: 20px;">
+<p align="center" style="font-size: 20px;">
   A <strong>Spring Boot-based API</strong> to manage customer data and orders. Includes endpoints for registration, order placement, analytics, and admin functionality. Powered by an <strong>H2 database</strong>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17-blue" alt="Java 17">
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.1.5-brightgreen" alt="Spring Boot">
+  <img src="https://img.shields.io/badge/H2-Database-orange" alt="H2 Database">
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License">
 </p>
 
 ---
 
-<h2 style="font-size: 25px;">🛠️ Setup</h2>
+<h2 style="font-size: 28px;">✨ Features</h2>
 
-<h3 style="font-size: 22px;">1. Clone the Repository</h3>
+<ul style="font-size: 18px;">
+  <li><strong>Customer Management</strong>:
+    <ul>
+      <li>Register a new customer.</li>
+      <li>Retrieve orders for a customer.</li>
+    </ul>
+  </li>
+  <li><strong>Order Management</strong>:
+    <ul>
+      <li>Place an order.</li>
+      <li>Cancel an order.</li>
+    </ul>
+  </li>
+  <li><strong>Admin Functionality</strong>:
+    <ul>
+      <li>View and manage all orders.</li>
+      <li>Update order statuses.</li>
+    </ul>
+  </li>
+  <li><strong>Analytics</strong>:
+    <ul>
+      <li>Most profitable customers.</li>
+      <li>Seasonal revenue trends.</li>
+      <li>Retention rates.</li>
+      <li>Product category performance.</li>
+      <li>Common order sizes.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+<h2 style="font-size: 28px;">📋 Prerequisites</h2>
+
+<ul style="font-size: 18px;">
+  <li><strong>Java 17+</strong> (Spring Boot or similar Java-based frameworks).</li>
+  <li><strong>Maven</strong> (for dependency management and building the project).</li>
+  <li><strong>H2 Database</strong> (embedded in-memory database for development or file-based for persistence).</li>
+  <li><strong>Postman</strong> (for testing API endpoints).</li>
+</ul>
+
+---
+
+<h2 style="font-size: 28px;">🛠️ Setup</h2>
+
+<h3 style="font-size: 24px;">1. Clone the Repository</h3>
 
 <pre style="font-size: 18px;">
 <code>git clone https://github.com/your_username/customer-order-analytics.git
 cd customer-order-analytics</code>
 </pre>
 
-<h3 style="font-size: 22px;">2. Install Dependencies</h3>
+<h3 style="font-size: 24px;">2. Install Dependencies</h3>
 
-<h4 style="font-size: 20px;">Maven:</h4>
+<p style="font-size: 18px;">
+  Use <strong>Maven</strong> to install dependencies:
+</p>
+
 <pre style="font-size: 18px;">
 <code>mvn clean install</code>
 </pre>
 
-<h4 style="font-size: 20px;">Gradle:</h4>
-<pre style="font-size: 18px;">
-<code>gradle build</code>
-</pre>
-
-<h3 style="font-size: 22px;">3. Database Setup</h3>
+<h3 style="font-size: 24px;">3. Database Setup</h3>
 
 <p style="font-size: 18px;">
-  <strong>In-Memory H2</strong>: No setup needed.
+  <strong>In-Memory H2</strong>: No setup needed. The database is created automatically when the application runs.
 </p>
 
 <p style="font-size: 18px;">
@@ -38,27 +88,27 @@ cd customer-order-analytics</code>
 </p>
 
 <pre style="font-size: 18px;">
-<code>spring.datasource.url=jdbc:h2:file:/path/to/database;DB_CLOSE_DELAY=-1
+<code>spring.datasource.url=jdbc:h2:file:/path/to/your/database/customer_order_analytics;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
-spring.datasource.password=password</code>
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect</code>
 </pre>
 
-<h3 style="font-size: 22px;">4. Run the API</h3>
+<h3 style="font-size: 24px;">4. Run the API</h3>
 
-<h4 style="font-size: 20px;">Maven:</h4>
+<p style="font-size: 18px;">
+  Use <strong>Maven</strong> to run the API:
+</p>
+
 <pre style="font-size: 18px;">
 <code>mvn spring-boot:run</code>
 </pre>
 
-<h4 style="font-size: 20px;">Gradle:</h4>
-<pre style="font-size: 18px;">
-<code>gradle bootRun</code>
-</pre>
-
-<h3 style="font-size: 22px;">5. Access the API</h3>
+<h3 style="font-size: 24px;">5. Access the API</h3>
 
 <p style="font-size: 18px;">
-  Access the API at:
+  Once the application is running, you can access the API at:
 </p>
 
 <pre style="font-size: 18px;">
@@ -67,10 +117,10 @@ spring.datasource.password=password</code>
 
 ---
 
-<h2 style="font-size: 25px;">🧪 Testing with Postman</h2>
+<h2 style="font-size: 28px;">🧪 Testing with Postman</h2>
 
 <p style="font-size: 18px;">
-  1. Import the <code>customer_order_analytics.postman_collection.json</code> file.
+  1. Import the <code>customer_order_analytics.postman_collection.json</code> file into Postman.
 </p>
 
 <p style="font-size: 18px;">
@@ -78,17 +128,19 @@ spring.datasource.password=password</code>
 </p>
 
 <ul style="font-size: 18px;">
-  <li>Customer registration.</li>
-  <li>Order placement and cancellation.</li>
-  <li>Admin operations.</li>
-  <li>Analytics (e.g., top customers, retention rates).</li>
+  <li>Registering a new customer.</li>
+  <li>Placing an order.</li>
+  <li>Viewing orders for a customer.</li>
+  <li>Canceling an order.</li>
+  <li>Updating order statuses (admin only).</li>
+  <li>Viewing analytics (e.g., most profitable customers, monthly retention rates).</li>
 </ul>
 
 ---
 
-<h2 style="font-size: 25px;">🌐 API Endpoints</h2>
+<h2 style="font-size: 28px;">🌐 API Endpoints</h2>
 
-<h3 style="font-size: 22px;">Customer Operations</h3>
+<h3 style="font-size: 24px;">Customer Operations</h3>
 
 <table style="font-size: 18px;">
   <tr>
@@ -99,17 +151,17 @@ spring.datasource.password=password</code>
   <tr>
     <td><code>/customers</code></td>
     <td>POST</td>
-    <td>Register a customer.</td>
+    <td>Register a new customer.</td>
   </tr>
   <tr>
     <td><code>/customers/:customer_id/orders</code></td>
     <td>POST</td>
-    <td>Place an order.</td>
+    <td>Place an order for a customer.</td>
   </tr>
   <tr>
     <td><code>/customers/:customer_id/orders</code></td>
     <td>GET</td>
-    <td>Retrieve orders.</td>
+    <td>Retrieve orders for a customer.</td>
   </tr>
   <tr>
     <td><code>/customers/:customer_id/orders/:order_id</code></td>
@@ -118,7 +170,7 @@ spring.datasource.password=password</code>
   </tr>
 </table>
 
-<h3 style="font-size: 22px;">Admin Operations</h3>
+<h3 style="font-size: 24px;">Admin Operations</h3>
 
 <table style="font-size: 18px;">
   <tr>
@@ -138,7 +190,7 @@ spring.datasource.password=password</code>
   </tr>
 </table>
 
-<h3 style="font-size: 22px;">Analytics</h3>
+<h3 style="font-size: 24px;">Analytics</h3>
 
 <table style="font-size: 18px;">
   <tr>
@@ -170,18 +222,7 @@ spring.datasource.password=password</code>
 
 ---
 
-<h2 style="font-size: 25px;">🔄 Execution Flow</h2>
-
-<ol style="font-size: 18px;">
-  <li><strong>Register a Customer</strong>: Use <code>POST /customers</code>.</li>
-  <li><strong>Place an Order</strong>: Use <code>POST /customers/:customer_id/orders</code>.</li>
-  <li><strong>Admin Actions</strong>: Use <code>GET /admin/orders</code> and <code>PUT /admin/orders/:order_id/status</code>.</li>
-  <li><strong>Analytics</strong>: Use endpoints like <code>GET /analytics/top-customers</code> for insights.</li>
-</ol>
-
----
-
-<h2 style="font-size: 25px;">📜 License</h2>
+<h2 style="font-size: 28px;">📜 License</h2>
 
 <p style="font-size: 18px;">
   This project is licensed under the <strong>MIT License</strong>. See <a href="LICENSE">LICENSE</a> for details.
@@ -189,8 +230,24 @@ spring.datasource.password=password</code>
 
 ---
 
-<h2 style="font-size: 25px;">🛡️ Badges</h2>
+<h2 style="font-size: 28px;">🌟 Why This Project?</h2>
 
 <p style="font-size: 18px;">
-  <img src="https://img.shields.io/github/license/your_username/customer-order-analytics?style=for-the-badge" alt="GitHub License">
-  <img src="https://img.shields.io/github/actions/workflow/status/your_username/c
+  This project demonstrates my ability to:
+</p>
+
+<ul style="font-size: 18px;">
+  <li>Design and implement a robust RESTful API using <strong>Spring Boot</strong>.</li>
+  <li>Work with databases like <strong>H2</strong> for efficient data management.</li>
+  <li>Create scalable and maintainable code with proper documentation.</li>
+  <li>Use tools like <strong>Postman</strong> for API testing and validation.</li>
+  <li>Generate meaningful analytics to drive business decisions.</li>
+</ul>
+
+---
+
+<h2 style="font-size: 28px;">📬 Contact Me</h2>
+
+<p style="font-size: 18px;">
+  If you have any questions or would like to connect, feel free to reach out:
+</p>

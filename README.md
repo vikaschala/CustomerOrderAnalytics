@@ -3,12 +3,10 @@
 <p align="center" style="font-size: 20px;">
   A <strong>Spring Boot-based API</strong> to manage customer data and orders. Includes endpoints for registration, order placement, analytics, and admin functionality. Powered by an <strong>H2 database</strong>.
 </p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Java-17-blue" alt="Java 17">
   <img src="https://img.shields.io/badge/Spring%20Boot-3.1.5-brightgreen" alt="Spring Boot">
   <img src="https://img.shields.io/badge/H2-Database-orange" alt="H2 Database">
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License">
 </p>
 
 ---
@@ -219,35 +217,3 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect</code>
     <td>Most common order sizes.</td>
   </tr>
 </table>
-
----
-
-<h2 style="font-size: 28px;">📜 License</h2>
-
-<p style="font-size: 18px;">
-  This project is licensed under the <strong>MIT License</strong>. See <a href="LICENSE">LICENSE</a> for details.
-</p>
-
----
-
-<h2 style="font-size: 28px;">🌟 Why This Project?</h2>
-
-<p style="font-size: 18px;">
-  This project demonstrates my ability to:
-</p>
-
-<ul style="font-size: 18px;">
-  <li>Design and implement a robust RESTful API using <strong>Spring Boot</strong>.</li>
-  <li>Work with databases like <strong>H2</strong> for efficient data management.</li>
-  <li>Create scalable and maintainable code with proper documentation.</li>
-  <li>Use tools like <strong>Postman</strong> for API testing and validation.</li>
-  <li>Generate meaningful analytics to drive business decisions.</li>
-</ul>
-
----
-
-<h2 style="font-size: 28px;">📬 Contact Me</h2>
-
-<p style="font-size: 18px;">
-  If you have any questions or would like to connect, feel free to reach out:
-</p>
